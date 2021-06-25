@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/istitutions','istitutionController@index');
+Route::get('/istitutions/{istitution}','istitutionController@show');
+Route::delete('/istitutions/(istitution}','istitutionController@destroy');
